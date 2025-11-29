@@ -10,7 +10,7 @@ def test_read_root():
     assert response.json() == {"message": "Hello CI/CD"}
 
 
-def test_read_2_root():
-    response = client.get("/hello")
+def test_read_hello():
+    response = client.get("/hello/World")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello world"}
+    assert response.json() == {"message": "Hello, World!"}

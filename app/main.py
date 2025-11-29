@@ -8,6 +8,6 @@ def read_root():
     return {"message": "Hello CI/CD"}
 
 
-@app.get("/hello")
-def hello():
-    return {"message": "Hello world"}
+@app.get("/hello/{name}")
+def read_hello(name: str):
+    return {"message": f"Hello, {name}!"}
